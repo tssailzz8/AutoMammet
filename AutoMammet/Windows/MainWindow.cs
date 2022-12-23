@@ -97,18 +97,18 @@ public class MainWindow : Window, IDisposable
 
         string[] languages = { "ja", "en", "de", "fr" };
 
-        if (ImGui.BeginCombo("Language", languages[this.config.ExportLanguage]))
-        {
-            for (int i = 0; i < languages.Length; i++)
-            {
-                if (ImGui.Selectable(languages[i]))
-                {
-                    this.config.ExportLanguage = i;
-                    this.config.Save();
-                }
-            }
-            ImGui.EndCombo();
-        }
+        //if (ImGui.BeginCombo("Language", languages[this.config.ExportLanguage]))
+        //{
+        //    for (int i = 0; i < languages.Length; i++)
+        //    {
+        //        if (ImGui.Selectable(languages[i]))
+        //        {
+        //            this.config.ExportLanguage = i;
+        //            this.config.Save();
+        //        }
+        //    }
+        //    ImGui.EndCombo();
+        //}
 
         ImGui.Spacing();
 

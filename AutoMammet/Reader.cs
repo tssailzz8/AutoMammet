@@ -46,7 +46,7 @@ namespace AutoMammet
             items = Dalamud.GameData.GetExcelSheet<MJICraftworksObject>((ClientLanguage)this.config.ExportLanguage)!.Select(o => itemData.GetRow(o.Item.Row)?.Name.ToString() ?? string.Empty).Where(s => s.Length > 0).Prepend(string.Empty).ToArray();
 
             var addon = Dalamud.GameData.GetExcelSheet<Addon>((ClientLanguage)this.config.ExportLanguage)!;
-            var addon_english = Dalamud.GameData.GetExcelSheet<Addon>(ClientLanguage.English)!;
+            var addon_english = Dalamud.GameData.GetExcelSheet<Addon>(ClientLanguage.ChineseSimplified)!;
 
             shifts = Enumerable.Range(15186, 5).Select(i => addon.GetRow((uint)i)!.Text.ToString()).ToArray();
             supplies = Enumerable.Range(15181, 5).Reverse().Select(i => addon.GetRow((uint)i)!.Text.ToString()).ToArray();

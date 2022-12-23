@@ -12,7 +12,7 @@ namespace AutoMammet
         public bool ViewDataInTable { get; set; } = false;
         public bool ExportTextVersion { get; set; } = false;
 
-        public int ExportLanguage { get; set; } = 1;
+        public int ExportLanguage { get;  } = 4;
 
         // the below exist just to make saving less cumbersome
         [NonSerialized]
